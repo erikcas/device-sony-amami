@@ -14,11 +14,6 @@
 
 TARGET_KERNEL_CONFIG := aosp_rhine_amami_defconfig
 
-# Recovery
-PRODUCT_PACKAGES += \
-    extract_elf_ramdisk \
-    keycheck
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 $(call inherit-product, device/sony/rhine-common/device.mk)
@@ -27,7 +22,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, vendor/apps/vendor-google-apps.mk)
 $(call inherit-product-if-exists, prebuilts/chromium/webview_prebuilt.mk)
 $(call inherit-product-if-exists, vendor/google/products/gms.mk)
-$(call inherit-product, device/qcom/sepolicy/sepolicy.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/amami/overlay
@@ -38,8 +32,7 @@ PRODUCT_COPY_FILES += \
     device/sony/amami/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
     device/sony/amami/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     device/sony/amami/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
-    device/sony/amami/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
-    device/sony/amami/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device
+    device/sony/amami/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_NAME := aosp_d5503
 PRODUCT_DEVICE := amami
