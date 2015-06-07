@@ -16,8 +16,7 @@ TARGET_KERNEL_CONFIG := aosp_rhine_amami_defconfig
 
 # Recovery
 PRODUCT_PACKAGES += \
-    extract_elf_ramdisk \
-    keycheck
+    extract_elf_ramdisk
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
