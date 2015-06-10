@@ -37,8 +37,7 @@ PRODUCT_COPY_FILES += \
     device/sony/amami/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
     device/sony/amami/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     device/sony/amami/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
-    device/sony/amami/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
-    device/sony/amami/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device
+    device/sony/amami/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_NAME := aosp_d5503
 PRODUCT_DEVICE := amami
