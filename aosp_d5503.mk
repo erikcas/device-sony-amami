@@ -44,3 +44,11 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320 \
     ro.usb.pid_suffix=1A7
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.amami
+
+# Power
+PRODUCT_PACKAGES += \
+    power.amami
